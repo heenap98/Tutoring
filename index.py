@@ -1,17 +1,17 @@
 from flask import Flask, jsonify, make_response, request, render_template
-from urllib.parse import urlparse
+
 import psycopg2
 from psycopg2.extras import DictCursor
 
 app = Flask(__name__, static_url_path='')
 
-urlparse.uses_netloc.append("postgres")
-url = urlparse.urlparse('postgres://obmglyypspspkz:793964b64f5859c9233d6125086992d9553e9443cf02afa1cbae9ca190c01c2b@ec2-54-221-198-206.compute-1.amazonaws.com:5432/d9mkr5p8hea3t1')
-db = psycopg2.connect(database=url.path[1:],
-	user=url.username,
-	password=url.password,
-	host=url.hostname,
-	port=url.port)
+#urlparse.uses_netloc.append("postgres")
+# url = urlparse.urlparse('postgres://obmglyypspspkz:793964b64f5859c9233d6125086992d9553e9443cf02afa1cbae9ca190c01c2b@ec2-54-221-198-206.compute-1.amazonaws.com:5432/d9mkr5p8hea3t1')
+db = psycopg2.connect(database='d9mkr5p8hea3t1',
+	user='obmglyypspspkz',
+	password='793964b64f5859c9233d6125086992d9553e9443cf02afa1cbae9ca190c01c2b',
+	host='ec2-54-221-198-206.compute-1.amazonaws.com',
+	port=5432)
 
 @app.route('/testdb')
 def test():
