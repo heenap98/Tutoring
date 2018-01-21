@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutor Profile</title>
+    <meta name="description" content="Tutor Profile">
+    <meta name="author" content="Heena Patel">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ladda-bootstrap/0.9.4/ladda-themeless.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container" style="max-width:800px;">
+      <div class="page-header">
+        <h1>Teacher Profile</h1>
+      </div>
+      <div class="row form-section" id="error-notice" style="display:none;">
+        <div class="col-md-12 col-xs-12">
+          <div class="alert alert-danger" role="alert" id="actual-error">Error</div>
+        </div>
+      </div>
+      <div id="form-wrapper">
+        <form role="form" data-toggle="validator" id="main-form">
+          <div class="row form-section">
+            <div class="col-md-4 col-xs-12">
+              <h4>Your Information</h4>
+            </div>
+            <div class="col-md-8 col-xs-12" id="membership-buttons">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" required readonly class="form-control-plaintext form-control custom-field" id="name" placeholder="{{ name }}">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" required readonly class="form-control-plaintext form-control custom-field" id="email" placeholder="{{ email }}">
+              </div>
+              <div class="form-group">
+                <label for="email">College:</label>
+                <input type="text" required readonly class="form-control-plaintext form-control custom-field" id="college" placeholder="{{ college }}">
+              </div>
+              <div class="form-group">
+                <label for="subjects">Subjects:</label>
+                <input type="text" required readonly class="form-control-plaintext form-control custom-field" id="subjects" placeholder="{{ subjects }}">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+        <a class="btn btn-info btn-lg" href="/update" role="button" style="width: 100%; margin-bottom: 15px; margin-top: 15px;">
+            <strong>Edit Profile</strong>
+          </a>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
