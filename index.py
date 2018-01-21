@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, make_response, request, render_template
-import urlparse
+from urllib.parse import urlparse
 import psycopg2
 from psycopg2.extras import DictCursor
 
