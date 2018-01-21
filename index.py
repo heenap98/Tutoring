@@ -7,7 +7,6 @@ app = Flask(__name__, static_url_path='')
 
 urlparse.uses_netloc.append("postgres")
 url = urlparse.urlparse('postgresql://localhost:5432/tutoring')
-#db  = psycopg2.connect(host="localhost", database="tutoring", user="heenapatel")
 db = psycopg2.connect(database=url.path[1:],
 	user=url.username,
 	password=url.password,
